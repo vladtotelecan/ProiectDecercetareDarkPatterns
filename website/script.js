@@ -256,6 +256,9 @@ if (document.getElementById("task1")) {
             document.getElementById("survey").hidden = true;
             document.getElementById("completed").hidden = false;
 
+            document.getElementById("finalParticipantID")
+                .textContent = participantID;
+
             if (sent) {
 
                 document.getElementById("resultMessage").textContent =

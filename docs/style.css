@@ -204,3 +204,22 @@ select {
     background: transparent;
     color: #334155;
 }
+
+.debrief {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.debrief h3 {
+    color: #1e3a8a;
+}
+
+.debrief p {
+    font-size: 14px;
+    line-height: 1.6;
+}

@@ -1,48 +1,130 @@
 
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Patterns - Experiment</title>
+
+    <title>Experiment - Comportamentul utilizatorilor</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Studiu privind comportamentul utilizatorilor</h1>
+    <main class="container">
+
+        <h1>Experiment de cercetare</h1>
+
+        <h2>Comportamentul utilizatorilor în mediul online</h2>
 
         <p>
-            Acest experiment face parte dintr-un proiect
-            universitar privind experiența utilizatorilor
-            în magazinele online.
+            Bine ai venit! Acest experiment face parte dintr-un
+            proiect universitar care analizează comportamentul
+            utilizatorilor în interacțiunea cu magazinele online.
         </p>
 
         <h2>Instrucțiuni</h2>
 
-        <p>În cadrul experimentului vei avea trei sarcini:</p>
+        <p>
+            Vei interacționa cu un magazin online simulat și
+            vei avea de rezolvat trei sarcini:
+        </p>
 
         <ol>
-            <li>Cumpără o pereche de căști fără servicii suplimentare.</li>
-            <li>Identifică prețul final al unei comenzi.</li>
-            <li>Anulează un abonament opțional.</li>
+            <li>
+                Cumpără o pereche de căști fără servicii
+                sau produse suplimentare.
+            </li>
+
+            <li>
+                Identifică prețul final al unui produs,
+                incluzând toate costurile suplimentare.
+            </li>
+
+            <li>
+                Anulează un abonament opțional.
+            </li>
         </ol>
 
         <p>
-            Experimentul nu implică plăți reale.
-            Participarea este voluntară și poți renunța
-            în orice moment.
+            La final, vei răspunde la două întrebări scurte
+            despre experiența ta.
+        </p>
+
+        <h2>Informații importante</h2>
+
+        <ul>
+            <li>Experimentul durează aproximativ 3-5 minute.</li>
+
+            <li>Participarea este voluntară.</li>
+
+            <li>Toate produsele și comenzile sunt simulate.</li>
+
+            <li>Nu se efectuează plăți reale.</li>
+
+            <li>Nu este necesară introducerea datelor bancare.</li>
+
+            <li>Poți abandona experimentul în orice moment.</li>
+        </ul>
+
+        <h2>Colectarea și utilizarea datelor</h2>
+
+        <p>
+            În timpul experimentului vor fi colectate
+            următoarele informații:
+        </p>
+
+        <ul>
+            <li>ID-ul de participant generat automat.</li>
+
+            <li>Grupul experimental în care ai fost repartizat.</li>
+
+            <li>Timpul necesar pentru rezolvarea sarcinilor.</li>
+
+            <li>Numărul de clickuri efectuate.</li>
+
+            <li>Numărul de erori realizate.</li>
+
+            <li>Răspunsurile la chestionarul final.</li>
+        </ul>
+
+        <p>
+            Nu solicităm numele, numărul de telefon,
+            adresa personală sau alte date de identificare directă.
         </p>
 
         <p>
-            Vor fi înregistrate timpul, clickurile,
-            erorile și răspunsurile tale, fără a solicita
-            numele sau adresa de email.
+            Rezultatele sunt stocate în Google Sheets și vor
+            fi utilizate în scop academic, pentru analiza
+            statistică a comportamentului utilizatorilor.
         </p>
+
+        <p>
+            La finalul experimentului vei primi informații
+            suplimentare despre scopul cercetării și ID-ul
+            tău de participant.
+        </p>
+
+        <p>
+            Poți solicita retragerea rezultatelor folosind
+            acest ID, prin contactarea cercetătorului.
+        </p>
+
+        <p>
+            <strong>Contact:</strong> vlad.totelecan@gmail.com
+        </p>
+
+        <h2>Consimțământ pentru participare</h2>
 
         <label>
             <input type="checkbox" id="consent">
-            Sunt de acord să particip la experiment.
+
+            Confirm că am citit și am înțeles informațiile
+            prezentate, am cel puțin 18 ani și sunt de acord
+            să particip voluntar la acest experiment și cu
+            utilizarea datelor colectate în scop academic.
         </label>
 
         <button id="startButton" disabled>
@@ -50,9 +132,11 @@
         </button>
 
         <p id="message"></p>
-    </div>
+
+    </main>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
