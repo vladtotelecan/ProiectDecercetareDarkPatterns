@@ -1,3 +1,29 @@
+const API_URL = "https://script.google.com/macros/s/AKfycbyjds6jhcq_ZhPYth3k-TYbZs6GDo5ZAgqhDAwG0ol4kBoCukzIvHPSjnVykb9O9jqhGQ/exec";
+
+async function sendResults(data) {
+
+    try {
+
+        await fetch(API_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain"
+            },
+            body: JSON.stringify(data)
+        });
+
+        console.log("Cererea a fost trimisa.");
+
+        return true;
+
+    } catch (error) {
+
+        console.error("Eroare la trimitere:", error);
+
+        return false;
+    }
+}
 
 const consent = document.getElementById("consent");
 const startButton = document.getElementById("startButton");
@@ -191,46 +217,60 @@ if (document.getElementById("task1")) {
         // ==========================================
 
         document.getElementById("finishButton")
-            .addEventListener("click", function () {
+            .addEventListener("click", async function () {
 
-                results.confidence = Number(
-                    document.getElementById("confidence").value
-                );
+            this.disabled = true;
+            this.textContent = "Se trimit rezultatele...";
 
-                results.control = Number(
-                    document.getElementById("control").value
-                );
+            results.confidence = Number(
+                document.getElementById("confidence").value
+            );
 
-                results.total_time = Number((
-                    results.task1_time +
-                    results.task2_time +
-                    results.task3_time
-                ).toFixed(2));
+            results.control = Number(
+                document.getElementById("control").value
+            );
 
-                results.total_errors =
-                    results.task1_error +
-                    results.task2_error +
-                    results.task3_error;
+            results.total_time = Number((
+                results.task1_time +
+                results.task2_time +
+                results.task3_time
+            ).toFixed(2));
 
-                results.total_clicks =
-                    results.task1_clicks +
-                    results.task2_clicks +
-                    results.task3_clicks;
+            results.total_errors =
+                results.task1_error +
+                results.task2_error +
+                results.task3_error;
 
-                sessionStorage.setItem(
-                    "experimentResults",
-                    JSON.stringify(results)
-                );
+            results.total_clicks =
+                results.task1_clicks +
+                results.task2_clicks +
+                results.task3_clicks;
 
-                document.getElementById("survey").hidden = true;
-                document.getElementById("completed").hidden = false;
+            sessionStorage.setItem(
+                "experimentResults",
+                JSON.stringify(results)
+            );
+
+            const sent = await sendResults(results);
+
+            document.getElementById("survey").hidden = true;
+            document.getElementById("completed").hidden = false;
+
+            if (sent) {
 
                 document.getElementById("resultMessage").textContent =
-                    "Rezultatele au fost inregistrate cu succes.";
+                    "Rezultatele au fost trimise spre inregistrare.";
 
-                console.table(results);
+            } else {
 
-            });
+                document.getElementById("resultMessage").textContent =
+                    "Trimiterea a esuat. Descarca fisierul CSV.";
+
+            }
+
+            console.table(results);
+
+        });
 
         // ==========================================
         // EXPORTAREA REZULTATELOR IN CSV
