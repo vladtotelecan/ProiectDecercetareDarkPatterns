@@ -1,0 +1,206 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    margin: 0;
+    padding: 40px 20px;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #1e3a8a;
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 21px;
+    margin-top: 25px;
+}
+
+p, li {
+    line-height: 1.7;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 25px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+#message {
+    text-align: center;
+}
+
+
+/* Magazin online */
+
+[hidden] {
+    display: none !important;
+}
+
+.product {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.product-icon {
+    font-size: 65px;
+    text-align: center;
+    margin: 15px;
+}
+
+.product h3 {
+    font-size: 23px;
+    color: #1e293b;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #15803d;
+}
+
+.option {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.danger {
+    background-color: #dc2626;
+}
+
+.danger:hover {
+    background-color: #b91c1c;
+}
+
+.secondary {
+    background-color: #64748b;
+}
+
+.secondary:hover {
+    background-color: #475569;
+}
+
+.task {
+    margin-top: 25px;
+}
+
+#completed {
+    text-align: center;
+}
+
+/* DARK PATTERNS */
+
+/* Preselection */
+
+.recommended {
+    color: #15803d;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Hidden Costs */
+
+.hidden-costs {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 25px;
+}
+
+.hidden-costs p {
+    margin: 3px 0;
+}
+
+/* Confirmshaming */
+
+.subscription-warning {
+    background-color: #fff7ed;
+    border: 1px solid #fdba74;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.subscription-warning h3 {
+    color: #c2410c;
+}
+
+.keep-premium {
+    background-color: #15803d;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.keep-premium:hover {
+    background-color: #166534;
+}
+
+.hidden-cancel {
+    background: transparent;
+    color: #64748b;
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: normal;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.hidden-cancel:hover {
+    background: transparent;
+    color: #334155;
+}

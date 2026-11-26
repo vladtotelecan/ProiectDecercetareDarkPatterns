@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Magazin online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>TechShop</h1>
+        <p>Magazin online de produse electronice</p>
+
+        <!-- Sarcina 1 -->
+        <section class="task" id="task1">
+
+            <h2>Sarcina 1 din 3</h2>
+            <p>Cumpără căștile fără servicii suplimentare.</p>
+
+            <div class="product">
+                <div class="product-icon">🎧</div>
+
+                <h3>Căști wireless</h3>
+
+                <p class="recommended">
+                    Protecție recomandată pentru produsul tău!
+                </p>
+
+                <p>Conexiune Bluetooth și autonomie de 30 de ore.</p>
+
+                <p class="price">150 lei</p>
+
+                <label class="option">
+                    <input type="checkbox" id="insurance" checked>
+                    Asigurare suplimentară (+30 lei)
+                </label>
+
+                <p>
+                    Total:
+                    <strong id="totalPrice">180 lei</strong>                </p>
+
+                <button id="buyButton">
+                    Finalizează comanda
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Sarcina 2 -->
+    <section class="task" id="task2" hidden>
+
+        <h2>Sarcina 2 din 3</h2>
+        <p>Identifică prețul final al comenzii.</p>
+
+        <div class="product">
+            <div class="product-icon">⌨️</div>
+
+            <h3>Tastatură wireless</h3>
+
+            <p class="price">Doar 200 lei!</p>
+
+            <p class="recommended">
+                Ofertă specială disponibilă acum
+            </p>
+
+            <div class="hidden-costs">
+                <p>Transport: +20 lei</p>
+                <p>Taxă de procesare: +10 lei</p>
+                <p>Total comandă: 230 lei</p>
+            </div>
+
+            <label for="priceAnswer">
+                Care este prețul final?
+            </label>
+
+            <input type="number"
+                id="priceAnswer"
+                placeholder="Introdu suma în lei"
+                min="0">
+
+            <button id="priceButton">
+                Confirmă răspunsul
+            </button>
+        </div>
+
+    </section>
+
+        <!-- Sarcina 3 -->
+        <section class="task" id="task3" hidden>
+
+            <h2>Sarcina 3 din 3</h2>
+            <p>Anulează abonamentul TechShop Premium.</p>
+
+            <div class="product">
+
+                <h3>TechShop Premium</h3>
+
+                <p>Cost lunar: 25 lei</p>
+                <p>Status: Activ</p>
+
+                <div class="subscription-warning">
+                    <h3>Sigur vrei să pierzi toate beneficiile?</h3>
+
+                    <p>Prin anularea abonamentului vei pierde:</p>
+
+                    <ul>
+                        <li>Transport gratuit</li>
+                        <li>Reduceri exclusive</li>
+                        <li>Acces la oferte speciale</li>
+                        <li>Asistență prioritară</li>
+                    </ul>
+                </div>
+
+                <button id="keepButton" class="keep-premium">
+                    Păstrează toate beneficiile Premium
+                </button>
+
+                <button id="cancelButton" class="hidden-cancel">
+                    Nu, prefer să pierd toate beneficiile
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Chestionar final -->
+        <section class="task" id="survey" hidden>
+
+            <h2>Chestionar final</h2>
+
+            <label for="confidence">
+                Câtă încredere ai avut în deciziile tale?
+            </label>
+
+            <select id="confidence">
+                <option value="1">1 - Foarte puțină</option>
+                <option value="2">2 - Puțină</option>
+                <option value="3" selected>3 - Moderată</option>
+                <option value="4">4 - Multă</option>
+                <option value="5">5 - Foarte multă</option>
+            </select>
+
+            <label for="control">
+                Cât control ai simțit asupra deciziilor?
+            </label>
+
+            <select id="control">
+                <option value="1">1 - Foarte puțin</option>
+                <option value="2">2 - Puțin</option>
+                <option value="3" selected>3 - Moderat</option>
+                <option value="4">4 - Mult</option>
+                <option value="5">5 - Foarte mult</option>
+            </select>
+
+            <button id="finishButton">
+                Finalizează experimentul
+            </button>
+
+        </section>
+
+        <!-- Final -->
+        <section id="completed" hidden>
+
+            <h2>Experiment finalizat!</h2>
+
+            <p>Îți mulțumim pentru participare.</p>
+
+            <p id="resultMessage"></p>
+
+            <button id="downloadButton">
+                Descarcă rezultatele CSV
+            </button>
+
+            <button onclick="window.location.href='index.html'">
+                Înapoi la pagina principală
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
