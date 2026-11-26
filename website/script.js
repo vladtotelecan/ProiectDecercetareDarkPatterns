@@ -45,7 +45,12 @@ if (document.getElementById("task1")) {
     const group = sessionStorage.getItem("group");
 
     // Verificarea sesiunii participantului
-    if (!participantID || group !== "normal") {
+    const expectedGroup =
+    window.location.pathname.endsWith("dark_patterns.html")
+        ? "dark_patterns"
+        : "normal";
+
+    if (!participantID || group !== expectedGroup) {
         window.location.replace("index.html");
     } else {
 
