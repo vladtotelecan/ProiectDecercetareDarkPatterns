@@ -68,3 +68,77 @@ button:disabled {
 #message {
     text-align: center;
 }
+
+
+/* Magazin online */
+
+[hidden] {
+    display: none !important;
+}
+
+.product {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.product-icon {
+    font-size: 65px;
+    text-align: center;
+    margin: 15px;
+}
+
+.product h3 {
+    font-size: 23px;
+    color: #1e293b;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #15803d;
+}
+
+.option {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.danger {
+    background-color: #dc2626;
+}
+
+.danger:hover {
+    background-color: #b91c1c;
+}
+
+.secondary {
+    background-color: #64748b;
+}
+
+.secondary:hover {
+    background-color: #475569;
+}
+
+.task {
+    margin-top: 25px;
+}
+
+#completed {
+    text-align: center;
+}
